@@ -3,53 +3,13 @@
 <head>
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-<script>
-// $(document).ready(function() {
-//   $('.scibadge_11112014-tabs .scibadge_11112014-tab-links a').on('click', function(e)  {
-//     var currentAttrValue = $(this).attr('href');
-//     // Show/Hide Tabs
-//     $('.scibadge_11112014-tabs ' + currentAttrValue).show().siblings().hide();
-//     // Change/remove current tab to active
-//     $(this).parent('li').addClass('active').siblings().removeClass('active');
-//     e.preventDefault();
-//   });
-// });
-// $(document).ready(function(){
-//   $("#scibadge_11112014-hide").click(function(){
-//     $('.scibadge_11112014').hide();
-//   });
-// });
-
-(function ($) {
-  $( document ).ready(function () {
-    var tabLinks = $( '.scibadge_11112014-tab-links' ),
-        tabLinksLi = tabLinks.find( 'li' ),
-        tabLinksAnchor = tabLinksLi.find( 'a' ),
-        tabContentPane = $( '.scibadge_11112014-tab-pane' );
-
-    tabLinksAnchor.on('click', function (e) {
-      var self = $( this ),
-          targetId = self.attr( 'href' );
-
-      tabLinksLi.removeClass( 'active' );
-      tabContentPane.removeClass( 'active' );
-
-      self.parent( 'li' ).addClass( 'active' );
-      $( targetId ).addClass( 'active' );
-
-      e.preventDefault();
-      e.stopPropagation();
-
-    });
-  });
-})(jQuery);
-</script>
-
 <style type="text/css" media="screen">
-
+html, body {
+  padding: 0;
+  margin: 0;
+}
 .background {
   background: #000 url('img/sample-background.jpg') no-repeat;
   background-size: cover;
@@ -58,67 +18,12 @@
   display: block;
 }
 </style>
-<link href="scibadge.css" rel="stylesheet">
+<script src="badge.js"></script>
+
+
+<!-- <link href="scibadge.css" rel="stylesheet"> -->
 </head>
 <body>
   <div class="background"></div>
-  <div class="scibadge_11112014">
-    <div class="scibadge_11112014-panel">
-      <div class="scibadge_11112014-header">
-        <a class="scibadge_11112014-logo" href="http://sci.ph" target="_blank"></a>
-        <a class="scibadge_11112014-hide" href="#close">&times;</a>
-      </div>
-      <div class="scibadge_11112014-body">
-        <div class="scibadge_11112014-tabs">
-          <ul class="scibadge_11112014-tab-links">
-              <li class="active"><a href="#scibadge_11112014-tab1">About</a></li>
-              <li><a href="#scibadge_11112014-tab2">Verticals</a></li>
-          </ul>
-        </div>
-        <div class="scibadge_11112014-tab-content">
-            <div id="scibadge_11112014-tab1" class="scibadge_11112014-tab-pane active">
-              <p>Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor.</p>
-            </div>
-            <div id="scibadge_11112014-tab2" class="scibadge_11112014-tab-pane">
-              <ul class="scibadge_11112014-verticals">
-                <li>
-                  <a href="#">
-                    <span class="scibadge_11112014-avatar scibadge_11112014-avatar-bitmarket"></span>
-                    <span class="scibadge_11112014-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="scibadge_11112014-avatar scibadge_11112014-avatar-bitmarket"></span>
-                    <span class="scibadge_11112014-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="scibadge_11112014-avatar scibadge_11112014-avatar-bitmarket"></span>
-                    <span class="scibadge_11112014-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="scibadge_11112014-avatar scibadge_11112014-avatar-bitmarket"></span>
-                    <span class="scibadge_11112014-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="scibadge_11112014-avatar scibadge_11112014-avatar-bitmarket"></span>
-                    <span class="scibadge_11112014-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-        </div>
-      </div>
-      <div class="scibadge_11112014-footer">
-        <a class="scibadge_11112014-email" href="mailto:hell@sci.ph">hello@sci.ph</a>
-      </div>
-    </div>
-  </div>
 </body>
 </html>
